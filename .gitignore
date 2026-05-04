@@ -1,0 +1,23 @@
+# Source dossier — private, don't commit
+Certificate of appreciation.pdf
+Major Abhilasha*.pdf
+Major Abhilasha*.docx
+
+# Old uncompressed video
+Major-Abhilasha-INDBATT.mp4
+
+# Duplicate uploaded images (already copied into assets/ with semantic names)
+fet cdr.jpg.jpeg
+fet group photo.jpg.jpeg
+
+# Design tool handoff
+design/
+
+# Raw extracted images
+assets/raw/
+
+# Local tooling
+.claude/
+.DS_Store
+node_modules/
+.vercel/

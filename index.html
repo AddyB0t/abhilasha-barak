@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Major Abhilasha Barak — Dreams don't have a Gender</title>
+<meta name="description" content="A tribute to Major Abhilasha Barak — India's first woman combat helicopter pilot, Engagement Team Commander with INDBATT, UNIFIL." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ---------- Tokens ---------- */
+  :root{
+    --un-blue: #009EDB;
+    --un-blue-soft: #4B92DB;
+    --navy: #0A1F44;
+    --navy-deep: #061436;
+    --cream: #F6F1E7;
+    --cream-warm: #EFE7D6;
+    --ivory: #FBF7EE;
+    --gold: #C9A961;
+    --gold-deep: #A88846;
+    --saffron: #FF9933;
+    --ink: #16213C;
+    --ink-soft: #44557A;
+    --rule: rgba(10,31,68,.14);
+    --rule-light: rgba(10,31,68,.08);
+
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Inter", -apple-system, "Helvetica Neue", system-ui, sans-serif;
+
+    --maxw: 1280px;
+    --gutter: clamp(20px, 4vw, 56px);
+  }
+
+  *,*::before,*::after{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0; background: var(--ivory); color: var(--ink);
+    font-family: var(--sans); font-size: 18px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color: inherit; }
+  ::selection{ background: var(--un-blue); color: #fff; }
+
+  .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* ---------- Reusable type ---------- */
+  .eyebrow{
+    font-family: var(--sans); font-weight: 500;
+    font-size: 12px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--un-blue);
+  }
+  .eyebrow.on-dark{ color: #9CD7F1; }
+  .eyebrow .dot{ display:inline-block; margin: 0 .55em; opacity:.6; }
+
+  h1,h2,h3,h4{ font-family: var(--serif); font-weight: 500; letter-spacing:-.01em; line-height: 1.05; margin:0; }
+  h2.section-title{
+    font-size: clamp(40px, 5.2vw, 76px);
+    line-height: 1.02; letter-spacing: -.015em;
+    text-wrap: balance;
+  }
+  h2.section-title em{ font-style: italic; color: var(--un-blue); font-weight:400; }
+
+  .lede{
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: clamp(22px, 2.4vw, 30px); line-height: 1.45; color: var(--ink);
+  }
+
+  /* ---------- Top label ---------- */
+  .topbar{
+    position: fixed; top:0; left:0; right:0; z-index: 50;
+    display:flex; align-items:center; justify-content:flex-end;
+    padding: 18px clamp(20px, 4vw, 40px);
+    color: rgba(255,255,255,.85);
+    pointer-events:none;
+    transition: color .4s ease;
+  }
+  .topbar .nav{
+    display:flex; gap: 28px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+    pointer-events:auto;
+  }
+  .topbar .nav a{ text-decoration:none; opacity:.78; transition: opacity .2s; }
+  .topbar .nav a:hover{ opacity:1; }
+  .topbar.scrolled{ color: var(--ink); background: rgba(251,247,238,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule-light); }
+  .topbar.scrolled .nav a{ opacity:.7; }
+
+  @media (max-width: 720px){ .topbar .nav{ display:none; } }
+
+  /* =====================================================
+     (A) HERO — full-bleed video background
+     ===================================================== */
+  .hero{
+    position: relative; min-height: 100vh;
+    background: var(--navy-deep); color: #fff;
+    display: flex; align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 30%;
+    z-index: 0;
+    filter: saturate(.95) contrast(1.04);
+  }
+  .hero-overlay{
+    position: absolute; inset: 0; z-index: 1;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(6,20,54,.82) 0%, rgba(6,20,54,.55) 45%, rgba(6,20,54,.35) 75%, rgba(6,20,54,.55) 100%),
+      linear-gradient(180deg, rgba(6,20,54,.55) 0%, rgba(6,20,54,.15) 35%, rgba(6,20,54,.85) 100%),
+      radial-gradient(1200px 600px at 20% 30%, rgba(0,158,219,.18), transparent 60%),
+      radial-gradient(900px 500px at 85% 80%, rgba(201,169,97,.12), transparent 60%);
+  }
+  .hero-copy{
+    position: relative; z-index: 2;
+    padding: clamp(120px, 14vh, 180px) clamp(28px, 5vw, 80px) 100px;
+    display:flex; flex-direction:column; justify-content:center; gap: 28px;
+    max-width: 880px;
+  }
+  .hero-eyebrow{
+    color: #9CD7F1; font-family: var(--sans); font-weight: 500;
+    font-size: 12px; letter-spacing: .26em; text-transform: uppercase;
+    display:flex; align-items:center; gap: 14px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.4);
+  }
+  .hero-eyebrow .bar{ width: 28px; height:1px; background: #9CD7F1; opacity:.7; }
+
+  .hero h1{
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(56px, 9vw, 132px);
+    line-height: .96; letter-spacing: -.025em;
+    color: #fff; text-wrap: balance;
+    text-shadow: 0 2px 24px rgba(0,0,0,.5), 0 1px 4px rgba(0,0,0,.3);
+  }
+  .hero h1 em{
+    font-style: italic; font-weight: 300;
+    color: #9CD7F1;
+  }
+  .hero .sub{
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(20px, 1.7vw, 24px); line-height: 1.5;
+    color: rgba(255,255,255,.92);
+    max-width: 56ch;
+    text-shadow: 0 1px 8px rgba(0,0,0,.5);
+  }
+  .hero .sub strong{ color: #fff; font-weight: 500; font-style: italic; }
+
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap: 32px 44px;
+    margin-top: 12px; padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,.22);
+    font-family: var(--sans); font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+    color: rgba(255,255,255,.7);
+  }
+  .hero-meta div span{ display:block; color: #fff; font-family: var(--serif); font-style: italic; font-size: 18px; letter-spacing: 0; text-transform: none; margin-top: 6px; text-shadow: 0 1px 6px rgba(0,0,0,.5); }
+
+  .scroll-cue{
+    position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%);
+    z-index: 3; color: rgba(255,255,255,.85);
+    font-family: var(--sans); font-size: 11px; letter-spacing: .3em; text-transform: uppercase;
+    display:flex; flex-direction:column; align-items:center; gap: 10px;
+    text-shadow: 0 1px 4px rgba(0,0,0,.5);
+  }
+  .scroll-cue .line{ width:1px; height: 44px; background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,0)); animation: scrollPulse 2.4s ease-in-out infinite; }
+  @keyframes scrollPulse{ 0%,100%{ transform: scaleY(.6); transform-origin: top; opacity:.6;} 50%{ transform: scaleY(1); opacity:1;} }
+
+  @media (max-width: 880px){
+    .hero{ min-height: 92vh; }
+    .hero-copy{ padding: 110px 28px 80px; }
+    .hero h1{ font-size: clamp(48px, 12vw, 80px); }
+    .hero-overlay{
+      background:
+        linear-gradient(180deg, rgba(6,20,54,.6) 0%, rgba(6,20,54,.45) 30%, rgba(6,20,54,.9) 100%);
+    }
+  }
+
+  /* =====================================================
+     (B) THE TRAILBLAZER
+     ===================================================== */
+  .section{ padding: clamp(80px, 11vh, 140px) 0; }
+  .section.ivory{ background: var(--ivory); }
+  .section.cream{ background: var(--cream); }
+  .section.navy{ background: var(--navy); color:#fff; }
+  .section.cream-warm{ background: var(--cream-warm); }
+
+  .trailblazer{
+    display:grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 110px);
+    align-items: start;
+  }
+  .trailblazer .pull{
+    position: relative;
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(34px, 4.2vw, 60px); line-height: 1.1; letter-spacing:-.015em;
+    color: var(--navy);
+    padding-left: 28px;
+    border-left: 2px solid var(--gold);
+    text-wrap: balance;
+  }
+  .trailblazer .pull em{ font-style: italic; color: var(--un-blue); }
+  .trailblazer .pull .attr{
+    display:block; margin-top: 28px;
+    font-family: var(--sans); font-style: normal; font-size: 12px;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .trailblazer .body p{ margin: 0 0 1.2em; color: var(--ink); }
+  .trailblazer .body p:first-child::first-letter{
+    font-family: var(--serif); font-size: 4.6em; line-height:.85; float:left;
+    padding: 6px 12px 0 0; color: var(--un-blue); font-weight: 500;
+  }
+  .trailblazer .body .convict{
+    font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.5;
+    color: var(--navy); padding-top: 8px; border-top: 1px solid var(--rule);
+    margin-top: 28px;
+  }
+
+  @media (max-width: 880px){
+    .trailblazer{ grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  /* =====================================================
+     (C) STATS STRIP
+     ===================================================== */
+  .stats-head{
+    display:flex; justify-content:space-between; align-items: end;
+    gap: 40px; margin-bottom: 56px;
+  }
+  .stats-head h2{ flex: 1; }
+  .stats-head .meta{
+    flex: 0 0 auto; max-width: 320px;
+    color: rgba(255,255,255,.7); font-size: 15px; line-height: 1.5;
+  }
+  .stats-grid{
+    display:grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,.12);
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+  }
+  .stat{
+    background: var(--navy);
+    padding: 36px 28px 32px;
+    display:flex; flex-direction: column; gap: 12px;
+    min-height: 220px;
+  }
+  .stat .num{
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(46px, 5vw, 72px); line-height: 1; letter-spacing: -.02em;
+    color: #fff;
+  }
+  .stat .num .unit{
+    font-size: .42em; color: var(--gold); letter-spacing: .04em;
+    margin-left: .15em; vertical-align: .25em; font-style: italic; font-weight: 300;
+  }
+  .stat .num .plus{
+    font-size: .55em; color: var(--gold); margin-left: .04em; font-weight: 300; vertical-align: .15em;
+  }
+  .stat .label{
+    font-family: var(--sans); font-size: 13px; line-height: 1.5;
+    color: rgba(255,255,255,.78);
+  }
+  .stat .tag{
+    font-family: var(--sans); font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--un-blue); margin-top: auto;
+  }
+  .stat.risk .tag{ color: var(--saffron); }
+  .stat.risk .num{ color: #FFD7AE; }
+
+  @media (max-width: 980px){ .stats-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px){ .stats-grid{ grid-template-columns: 1fr; } }
+
+  /* =====================================================
+     (D) MISSION PILLARS
+     ===================================================== */
+  .mission-head{
+    display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end;
+    margin-bottom: 64px;
+  }
+  .mission-head .lede{ max-width: 52ch; }
+  .pillars{
+    display:grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .pillar{
+    background: var(--ivory);
+    padding: 36px 28px 40px;
+    display:flex; flex-direction:column; gap: 18px;
+    min-height: 280px;
+    transition: background .3s ease;
+  }
+  .pillar:hover{ background: #fff; }
+  .pillar .num{
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    color: var(--gold); font-size: 22px;
+  }
+  .pillar svg{ width: 40px; height: 40px; color: var(--un-blue); }
+  .pillar h3{
+    font-family: var(--serif); font-size: 26px; line-height: 1.15; letter-spacing:-.01em;
+    color: var(--navy); margin-top: auto;
+  }
+  .pillar p{
+    font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); margin: 0;
+  }
+
+  @media (max-width: 1080px){ .pillars{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px){ .pillars{ grid-template-columns: 1fr; } }
+
+  /* =====================================================
+     (E) SIGNATURE INITIATIVES
+     ===================================================== */
+  .initiatives{ display: flex; flex-direction: column; gap: clamp(60px, 9vh, 110px); }
+  .init{
+    display:grid; grid-template-columns: 1.05fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  .init.reverse{ grid-template-columns: 1fr 1.05fr; }
+  .init.reverse .init-img{ order: 2; }
+
+  .init-img{
+    position: relative; aspect-ratio: 4/3; overflow:hidden;
+    background: linear-gradient(135deg, #0d2a5c, #2e76b8);
+    border-radius: 2px;
+  }
+  .init-img img{
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .init-num{
+    position:absolute; top: 20px; left: 20px;
+    font-family: var(--serif); font-style: italic; color: var(--gold);
+    font-size: 20px; letter-spacing: .04em;
+    background: rgba(10,31,68,.7); padding: 6px 14px; border-radius: 999px;
+    backdrop-filter: blur(6px);
+  }
+
+  .init-body .eyebrow{ margin-bottom: 18px; display:block; }
+  .init-body h3{
+    font-family: var(--serif); font-size: clamp(34px, 3.6vw, 52px); line-height: 1.05;
+    letter-spacing:-.015em; color: var(--navy); margin-bottom: 22px;
+    text-wrap: balance;
+  }
+  .init-body h3 em{ font-style: italic; color: var(--un-blue); font-weight: 400; }
+  .init-body p{ color: var(--ink); margin: 0 0 1.1em; max-width: 56ch; }
+
+  .init-stats{
+    display:flex; flex-wrap:wrap; gap: 28px 40px;
+    margin-top: 28px; padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .init-stats div{ font-family: var(--sans); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); }
+  .init-stats div b{
+    display:block; font-family: var(--serif); font-style: italic; font-weight: 500;
+    font-size: 30px; letter-spacing: 0; text-transform: none; color: var(--navy); margin-bottom: 4px;
+  }
+
+  .init-link{
+    display:inline-flex; align-items:center; gap: 12px;
+    margin-top: 28px;
+    font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--un-blue); text-decoration: none;
+    padding-bottom: 4px; border-bottom: 1px solid var(--un-blue);
+    transition: gap .25s;
+  }
+  .init-link:hover{ gap: 18px; }
+
+  @media (max-width: 880px){
+    .init, .init.reverse{ grid-template-columns: 1fr; gap: 32px; }
+    .init.reverse .init-img{ order: 0; }
+  }
+
+  /* =====================================================
+     (F) GALLERY MOSAIC
+     ===================================================== */
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .gtile{
+    position: relative; overflow: hidden;
+    background: #0A1F44;
+    border-radius: 2px;
+    aspect-ratio: 4/3;
+  }
+  .gtile img{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 1.6s cubic-bezier(.2,.6,.2,1);
+  }
+  .gtile:hover img{ transform: scale(1.05); }
+  .gtile::after{
+    content:""; position:absolute; inset:0;
+    background: linear-gradient(180deg, transparent 50%, rgba(6,20,54,.82));
+    pointer-events: none;
+  }
+  .gtile .cap{
+    position:absolute; left: 14px; bottom: 14px; right: 14px;
+    z-index: 2;
+    font-family: var(--sans); font-size: 12px; letter-spacing: .04em; line-height: 1.3;
+    color: var(--navy); font-weight: 500;
+    background: var(--gold); padding: 6px 10px;
+    display: inline-block; width: max-content; max-width: calc(100% - 28px);
+  }
+  .gtile .ph-label{ display: none; }
+
+  @media (max-width: 880px){
+    .gallery{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px){
+    .gallery{ grid-template-columns: 1fr; }
+  }
+
+  /* =====================================================
+     (G) VIDEO TRIBUTE
+     ===================================================== */
+  .videos{
+    display: grid; grid-template-columns: 1fr 1fr; gap: 36px;
+    margin-top: 56px;
+    align-items: start;
+  }
+  .vid{ display: flex; flex-direction: column; margin: 0; }
+  .vid figcaption{
+    font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.4;
+    color: var(--navy); margin-bottom: 18px;
+    min-height: calc(1.4em * 2);
+    text-wrap: balance;
+  }
+  .vid .player{
+    width: 100%;
+    aspect-ratio: 16/9; background: #000; position: relative; overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .vid .player video{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .vid .player .ph{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    background:
+      radial-gradient(60% 50% at 50% 50%, rgba(0,158,219,.18), transparent 70%),
+      linear-gradient(135deg, #061436, #0A1F44);
+    color: rgba(255,255,255,.72);
+    flex-direction: column; gap: 14px;
+  }
+  .vid .play{
+    width: 76px; height: 76px; border-radius: 50%;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.4);
+    display:flex; align-items:center; justify-content:center;
+    transition: background .25s, transform .25s;
+  }
+  .vid .play:hover{ background: rgba(255,255,255,.12); transform: scale(1.04); }
+  .vid .play svg{ width: 24px; height: 24px; color: #fff; margin-left: 4px; }
+  .vid .ph-label{ font-size: 11px; letter-spacing: .25em; text-transform: uppercase; }
+
+  @media (max-width: 880px){ .videos{ grid-template-columns: 1fr; } }
+
+  /* =====================================================
+     (H) STORIES OF CHANGE
+     ===================================================== */
+  .stories{ display:flex; flex-direction:column; gap: 96px; }
+  .story{ display:grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .story-images{
+    display:grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  .story-images figure{ margin:0; }
+  .story-images .img{
+    aspect-ratio: 3/4; background: #0A1F44; position:relative; overflow:hidden;
+  }
+  .story-images .img img{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .story-images figcaption{
+    font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--ink-soft);
+    margin-top: 10px; line-height: 1.4;
+  }
+  .story-body .eyebrow{ margin-bottom: 16px; display:block; }
+  .story-body h3{
+    font-family: var(--serif); font-size: clamp(30px,3.2vw,46px); line-height: 1.1;
+    color: var(--navy); margin-bottom: 18px; text-wrap: balance;
+  }
+  .story-body p{ color: var(--ink); margin: 0 0 1em; max-width: 56ch; }
+
+  .testimonial{
+    background: var(--cream); padding: clamp(40px, 6vw, 80px);
+    border-left: 3px solid var(--gold);
+    position: relative;
+  }
+  .testimonial .quote-mark{
+    font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 120px;
+    line-height: .8; position: absolute; top: 20px; left: 24px; opacity:.35;
+  }
+  .testimonial blockquote{
+    font-family: var(--serif); font-weight: 400; font-style: italic;
+    font-size: clamp(26px, 3vw, 40px); line-height: 1.25; letter-spacing:-.01em;
+    color: var(--navy); margin: 0; position: relative; z-index:1;
+    text-wrap: balance;
+  }
+  .testimonial cite{
+    display:block; margin-top: 28px;
+    font-family: var(--sans); font-style: normal; font-size: 12px;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .testimonial cite b{ color: var(--navy); font-weight: 600; }
+
+  @media (max-width: 880px){ .story{ grid-template-columns: 1fr; gap: 32px; } }
+
+  /* =====================================================
+     (H2) FEATURE — all-women patrol
+     ===================================================== */
+  .feature-bleed{
+    position: relative;
+    min-height: 80vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: var(--navy-deep);
+    color: #fff;
+  }
+  .feature-bleed img.bg{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 30%;
+    filter: saturate(.95) contrast(1.05);
+  }
+  .feature-bleed::after{
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(6,20,54,.55) 0%, rgba(6,20,54,.20) 35%, rgba(6,20,54,.88) 100%),
+      radial-gradient(900px 500px at 50% 70%, rgba(0,158,219,.20), transparent 65%);
+    pointer-events: none;
+  }
+  .feature-bleed .content{
+    position: relative; z-index: 1;
+    max-width: 980px;
+    padding: clamp(100px, 14vh, 160px) clamp(28px, 5vw, 60px);
+  }
+  .feature-bleed .eyebrow{
+    color: #9CD7F1;
+    display: inline-flex; align-items: center; gap: 14px;
+    margin-bottom: 32px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.4);
+  }
+  .feature-bleed .eyebrow .bar{ width: 28px; height: 1px; background: #9CD7F1; opacity: .7; }
+  .feature-bleed h2{
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(48px, 7vw, 104px);
+    line-height: 1.02; letter-spacing: -.025em;
+    color: #fff; text-wrap: balance;
+    text-shadow: 0 2px 28px rgba(0,0,0,.55), 0 1px 6px rgba(0,0,0,.35);
+  }
+  .feature-bleed h2 em{
+    font-style: italic; font-weight: 300; color: #9CD7F1;
+  }
+
+  @media (max-width: 760px){
+    .feature-bleed{ min-height: 70vh; }
+  }
+
+  /* =====================================================
+     (I) RECOGNITION
+     ===================================================== */
+  .recog{ display:grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: center; }
+  .cert{
+    position: relative; aspect-ratio: 4/3; padding: 0;
+    background: #FBF7EE;
+    border: 1px solid var(--gold);
+    box-shadow: 0 30px 80px -30px rgba(10,31,68,.35), 0 8px 20px -8px rgba(10,31,68,.18);
+    overflow: hidden;
+  }
+  .cert::before{
+    content:""; position:absolute; inset: 14px;
+    border: 1px solid var(--gold); pointer-events: none;
+  }
+  .cert-inner{
+    position:absolute; inset: 36px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; gap: 14px;
+  }
+  .cert-seal{
+    width: 56px; height:56px; border-radius:50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+    display:flex; align-items:center; justify-content:center;
+    color: var(--navy); font-family: var(--serif); font-style: italic; font-size: 20px; font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .cert .meta{
+    font-family: var(--sans); font-size: 10px; letter-spacing:.3em; text-transform: uppercase;
+    color: var(--gold-deep);
+  }
+  .cert h4{
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: clamp(26px, 2.4vw, 34px); color: var(--navy); line-height: 1.2;
+    max-width: 28ch;
+  }
+  .cert .name{
+    font-family: var(--serif); font-size: clamp(28px, 2.6vw, 36px); font-weight: 500;
+    color: var(--navy); letter-spacing: .01em;
+  }
+  .cert .issuer{
+    font-family: var(--sans); font-size: 11px; letter-spacing:.2em; text-transform: uppercase;
+    color: var(--ink-soft); margin-top: 6px;
+  }
+  .cert .ribbon{
+    position:absolute; right: -38px; top: 24px;
+    background: var(--saffron); color: #fff;
+    font-family: var(--sans); font-size: 10px; letter-spacing:.22em; text-transform:uppercase;
+    padding: 4px 50px; transform: rotate(35deg);
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  }
+
+  .recog-body h2.section-title{ margin-bottom: 24px; }
+  .recog-body .citation{
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: clamp(20px, 2vw, 26px); line-height: 1.5; color: var(--ink);
+    border-left: 2px solid var(--gold); padding-left: 24px; margin: 24px 0;
+  }
+  .recog-body .issuer{
+    font-family: var(--sans); font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--ink-soft); margin-top: 8px;
+  }
+
+  @media (max-width: 880px){ .recog{ grid-template-columns: 1fr; } }
+
+  /* =====================================================
+     (J) MEDIA & PRESS
+     ===================================================== */
+  .press{
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 56px 0; margin-top: 56px;
+    overflow: hidden;
+  }
+  .press .row{
+    display:flex; gap: 56px; align-items: center;
+    animation: marquee 50s linear infinite;
+    width: max-content;
+  }
+  .press a{
+    font-family: var(--serif); font-style: italic; font-size: 22px;
+    color: var(--ink-soft); text-decoration: none;
+    white-space: nowrap; transition: color .2s;
+  }
+  .press a:hover{ color: var(--un-blue); }
+  .press .dot{ width: 4px; height:4px; border-radius: 50%; background: var(--gold); flex: 0 0 auto; }
+  @keyframes marquee{ from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
+
+  .press-meta{
+    text-align:center; margin-top: 36px;
+    font-family: var(--sans); font-size: 14px; color: var(--ink-soft); letter-spacing:.02em;
+  }
+  .press-meta b{ color: var(--navy); font-weight: 600; }
+
+  /* =====================================================
+     (K) THE WHY
+     ===================================================== */
+  .why{
+    max-width: 720px; margin: 0 auto; text-align: center;
+  }
+  .why .eyebrow{ margin-bottom: 28px; display:block; }
+  .why h2{
+    font-family: var(--serif); font-size: clamp(34px, 4vw, 56px);
+    line-height: 1.08; letter-spacing:-.015em; color: var(--navy); margin-bottom: 36px;
+    text-wrap: balance;
+  }
+  .why .body{
+    font-family: var(--serif); font-size: clamp(20px, 1.8vw, 24px); line-height: 1.6;
+    color: var(--ink); text-align: left;
+  }
+  .why .body p{ margin: 0 0 1.4em; }
+  .why .divider{ width: 60px; height: 1px; background: var(--gold); margin: 48px auto; }
+  .why .closer{
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: clamp(34px, 4.4vw, 60px); line-height: 1.15; letter-spacing:-.015em;
+    color: var(--navy); text-wrap: balance;
+  }
+  .why .closer em{ color: var(--un-blue); font-style: italic; font-weight: 500; }
+
+  /* =====================================================
+     (L) FOOTER
+     ===================================================== */
+  footer{
+    background: var(--navy-deep); color: rgba(255,255,255,.7);
+    padding: 80px 0 60px;
+  }
+  footer .top{
+    display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 56px;
+    padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+  footer h5{
+    font-family: var(--sans); font-weight: 500; font-size: 11px; letter-spacing: .26em; text-transform: uppercase;
+    color: rgba(255,255,255,.45); margin: 0 0 18px;
+  }
+  footer .credit{
+    font-family: var(--serif); font-style: italic; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.3;
+    color: #fff;
+  }
+  footer .credit small{
+    display:block; font-style: normal; font-family: var(--sans); font-size: 13px;
+    letter-spacing: .04em; color: rgba(255,255,255,.55); margin-top: 14px; line-height: 1.5;
+  }
+  footer ul{ list-style: none; margin:0; padding:0; display:flex; flex-direction: column; gap: 10px; }
+  footer ul a{
+    color: rgba(255,255,255,.78); text-decoration: none;
+    font-size: 14px; transition: color .2s;
+    border-bottom: 1px solid transparent;
+  }
+  footer ul a:hover{ color: #9CD7F1; border-bottom-color: rgba(156,215,241,.5); }
+
+  footer .bottom{
+    display:flex; justify-content: space-between; align-items:center;
+    padding-top: 28px;
+    font-size: 12px; letter-spacing: .04em; color: rgba(255,255,255,.45);
+  }
+  footer .bottom .seal{
+    font-family: var(--serif); font-style: italic;
+    color: #9CD7F1;
+  }
+
+  @media (max-width: 760px){
+    footer .top{ grid-template-columns: 1fr; gap: 32px; }
+    footer .bottom{ flex-direction: column; gap: 12px; align-items:flex-start; }
+  }
+
+  /* =====================================================
+     Reveal animations
+     ===================================================== */
+  .reveal{ opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in{ opacity: 1; transform: none; }
+  .reveal.delay-1{ transition-delay: .08s; }
+  .reveal.delay-2{ transition-delay: .16s; }
+  .reveal.delay-3{ transition-delay: .24s; }
+  .reveal.delay-4{ transition-delay: .32s; }
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{ animation: none !important; transition: none !important; }
+    .reveal{ opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== Top label / nav ========== -->
+<div class="topbar" id="topbar">
+  <nav class="nav" aria-label="Section navigation">
+    <a href="#story">Story</a>
+    <a href="#impact">Impact</a>
+    <a href="#mission">Mission</a>
+    <a href="#initiatives">Initiatives</a>
+    <a href="#recognition">Recognition</a>
+  </nav>
+</div>
+
+<!-- ========================================================
+     (A) HERO — full-bleed autoplay video background
+     ======================================================== -->
+<header class="hero" id="top">
+  <video class="hero-bg" autoplay muted loop playsinline preload="auto"
+         poster="assets/portrait.jpg" aria-hidden="true"
+         src="Major-Abhilasha-INDBATT-web.mp4"></video>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-copy">
+    <div class="hero-eyebrow"><span class="bar"></span>UNIFIL · INDBATT · Engagement Team Commander</div>
+    <h1>Dreams don't have a <em>Gender.</em></h1>
+    <p class="sub">
+      <strong>Major Abhilasha Barak</strong> — India's first woman combat helicopter pilot,
+      leading her country's first-ever UN Engagement Team along the Blue Line, Southern Lebanon.
+    </p>
+    <div class="hero-meta">
+      <div>Nominated <span>UN Military Gender Advocate of the Year — 2025</span></div>
+      <div>Mission <span>UN Interim Force in Lebanon</span></div>
+      <div>Unit <span>INDBATT · Indian Army</span></div>
+    </div>
+  </div>
+
+</header>
+
+<!-- ========================================================
+     (B) THE TRAILBLAZER
+     ======================================================== -->
+<section class="section ivory" id="story">
+  <div class="wrap">
+    <div class="trailblazer">
+      <div class="pull reveal">
+        Breaking the <em>glass ceiling</em> for 698&nbsp;million women of her country.
+        <span class="attr">— On Major Abhilasha Barak</span>
+      </div>
+      <div class="body reveal delay-1">
+        <p>
+          She is a soldier, an aviator, and an advocate. Major Abhilasha Barak is the first woman
+          combat helicopter pilot in the history of the Indian Army — and today she serves as
+          Engagement Team Commander with INDBATT under the United Nations Interim Force in Lebanon,
+          patrolling the Blue Line that separates Lebanon and Israel.
+        </p>
+        <p>
+          Her brief is unusual for a combat aviator. For one year she does not fly. Instead she walks
+          into villages where peacekeepers were once unwelcome, sits with women in their kitchens and
+          their classrooms, and rebuilds — day by day — a quiet, durable trust between a community
+          and a blue beret.
+        </p>
+        <p class="convict">
+          She left the helicopter cockpit for a year — not out of necessity, but out of conviction.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (C) IMPACT BY NUMBERS
+     ======================================================== -->
+<section class="section navy" id="impact">
+  <div class="wrap">
+    <div class="stats-head">
+      <div>
+        <div class="eyebrow on-dark reveal">Impact by the numbers</div>
+        <h2 class="section-title reveal" style="color:#fff; margin-top: 18px;">
+          Six&nbsp;months. <em>One Engagement Team.</em>
+        </h2>
+      </div>
+      <p class="meta reveal delay-1">
+        Verified figures from the UN Military Gender Advocate of the Year 2025
+        nomination dossier. UNIFIL Sector East · INDBATT.
+      </p>
+    </div>
+
+    <div class="stats-grid reveal delay-2">
+      <div class="stat">
+        <div class="num" data-count="698"><span class="unit">M</span></div>
+        <div class="label">Women she represents as a barrier-breaker.</div>
+        <div class="tag">Representation</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="5934"></div>
+        <div class="label">Local Lebanese women &amp; girls directly engaged.</div>
+        <div class="tag">Engagement</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="539"></div>
+        <div class="label">Gender-focused activities — highest in the entire UNIFIL mission.</div>
+        <div class="tag">Programmes</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="314"></div>
+        <div class="label">Outreach &amp; CIMIC activities in six months.</div>
+        <div class="tag">Outreach</div>
+      </div>
+
+      <div class="stat">
+        <div class="num" data-count="850"><span class="plus">+</span></div>
+        <div class="label">UN peacekeepers mentored on gender training.</div>
+        <div class="tag">Mentorship</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="75"></div>
+        <div class="label">Fully funded international scholarships unlocked for Lebanese women.</div>
+        <div class="tag">Scholarship</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="520"></div>
+        <div class="label">Medical camps organised across the area of operations.</div>
+        <div class="tag">Health</div>
+      </div>
+      <div class="stat risk">
+        <div class="num" data-count="106"></div>
+        <div class="label">Direct fire incidents in the area she operates in — the context of her work.</div>
+        <div class="tag">Operational risk</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (D) THE MISSION — five pillars
+     ======================================================== -->
+<section class="section ivory" id="mission">
+  <div class="wrap">
+    <div class="mission-head">
+      <div>
+        <div class="eyebrow reveal">The mission</div>
+        <h2 class="section-title reveal" style="margin-top: 18px; color: var(--navy);">
+          Five pillars, <em>one mandate.</em>
+        </h2>
+      </div>
+      <p class="lede reveal delay-1">
+        The framework Major Abhilasha leads under as Commander of INDBATT's Engagement Team —
+        the first of its kind from India deployed under a United Nations flag.
+      </p>
+    </div>
+
+    <div class="pillars reveal delay-2">
+      <article class="pillar">
+        <div class="num">01</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="9" cy="8" r="3.2"/><circle cx="16" cy="9" r="2.4"/><path d="M3 19c.4-3 3-5 6-5s5.6 2 6 5"/><path d="M14 18.5c.5-2 2-3.4 4.2-3.4"/></svg>
+        <h3>Community Engagement Walks</h3>
+        <p>Door-to-door, footstep-by-footstep presence in border villages — turning suspicion into welcome over months of patient return visits.</p>
+      </article>
+      <article class="pillar">
+        <div class="num">02</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M7 9.5V14c0 1.5 2.5 3 5 3s5-1.5 5-3V9.5"/><path d="M21 8v6"/></svg>
+        <h3>Awareness &amp; Education</h3>
+        <p>Workshops on gender rights, child safety, mental health and civic literacy — delivered in schools, community halls and homes.</p>
+      </article>
+      <article class="pillar">
+        <div class="num">03</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 20V8l8-4 8 4v12"/><path d="M9 20v-6h6v6"/><path d="M4 12h16"/></svg>
+        <h3>Capacity Building &amp; Vocational Training</h3>
+        <p>From candle-making and catering to computer literacy and accounting — skills that turn participants into earners and leaders.</p>
+      </article>
+      <article class="pillar">
+        <div class="num">04</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+        <h3>Physical &amp; Mental Fitness</h3>
+        <p>Yoga, meditation, sport and self-defence sessions — for women, children and special-needs communities across the sector.</p>
+      </article>
+      <article class="pillar">
+        <div class="num">05</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+        <h3>Cultural Exchange</h3>
+        <p>Walks for peace, language &amp; food exchanges, and shared festivals — reframing peacekeeping as neighbourliness.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (E) SIGNATURE INITIATIVES
+     ======================================================== -->
+<section class="section cream" id="initiatives">
+  <div class="wrap">
+    <div class="mission-head" style="margin-bottom: 72px;">
+      <div>
+        <div class="eyebrow reveal">Signature initiatives</div>
+        <h2 class="section-title reveal" style="margin-top: 18px;">
+          Three <em>built-from-scratch</em> programmes.
+        </h2>
+      </div>
+      <p class="lede reveal delay-1">
+        Not events. Not photo-ops. Standing institutions she conceived, raised funding for, and
+        handed back to the community.
+      </p>
+    </div>
+
+    <div class="initiatives">
+      <!-- Initiative 1 — LGI -->
+      <article class="init reveal">
+        <div class="init-img">
+          <span class="init-num">No. 01</span>
+          <img src="assets/initiative-lgi.jpg" alt="Lebanon Gender Initiative website — Your Voice Matters" loading="lazy" />
+        </div>
+        <div class="init-body">
+          <span class="eyebrow">Digital · GBV · Self-defence</span>
+          <h3>Lebanon Gender Initiative <em>(LGI)</em></h3>
+          <p>
+            An AI-powered grievance and self-defence platform she built for women and children
+            across South Lebanon — quietly, in the months between patrols.
+          </p>
+          <p>
+            The platform offers anonymous reporting of gender-based violence, a 24×7 helpline,
+            and a multilingual self-defence training library.
+          </p>
+          <a class="init-link" href="https://www.lebanongenderinitiative.online/en" target="_blank" rel="noopener noreferrer">
+            Visit lebanongenderinitiative.online
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Initiative 2 — ITEC -->
+      <article class="init reverse reveal">
+        <div class="init-img">
+          <span class="init-num">No. 02</span>
+          <img src="assets/initiative-itec.jpg" alt="Indian Technical and Economic Cooperation programme courses" loading="lazy" />
+        </div>
+        <div class="init-body">
+          <span class="eyebrow">Scholarship · India ↔ Lebanon</span>
+          <h3>75 ITEC <em>Scholarships</em></h3>
+          <p>
+            Working with the Government of India, she unlocked 75 fully funded ITEC programme seats
+            for Lebanese women aged 25–45.
+          </p>
+          <p>
+            Disciplines spanning renewable energy, agri-entrepreneurship, accounting and banking —
+            taught in India, on full scholarship, with the goal of a generation of qualified women
+            returning home as anchors of the local economy.
+          </p>
+          <div class="init-stats">
+            <div><b>75</b>Full scholarships</div>
+            <div><b>4</b>Disciplines</div>
+            <div><b>25–45</b>Age band</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Initiative 3 — Economic empowerment -->
+      <article class="init reveal">
+        <div class="init-img">
+          <span class="init-num">No. 03</span>
+          <img src="assets/initiative-economic.jpg" alt="Major Abhilasha with a Lebanese woman vendor preparing food" loading="lazy" />
+        </div>
+        <div class="init-body">
+          <span class="eyebrow">Livelihoods · Markets · Health</span>
+          <h3>Economic <em>Empowerment</em> of Women</h3>
+          <p>
+            29 vocational programmes delivered in six months — and a measurable shift in who
+            shows up to local markets, clinics and dental chairs.
+          </p>
+          <div class="init-stats">
+            <div><b>29</b>Vocational programmes</div>
+            <div><b>+38%</b>Female vendors in markets</div>
+            <div><b>+110%</b>Female medical patients</div>
+            <div><b>+260%</b>Female dental patients</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (F) GALLERY MOSAIC
+     ======================================================== -->
+<section class="section ivory" id="gallery">
+  <div class="wrap">
+    <div class="mission-head" style="margin-bottom: 56px;">
+      <div>
+        <div class="eyebrow reveal">From the field</div>
+        <h2 class="section-title reveal" style="margin-top: 18px;">
+          The work, <em>in fragments.</em>
+        </h2>
+      </div>
+      <p class="lede reveal delay-1">
+        Eleven recurring activities the Engagement Team has run across South Lebanon —
+        shown here with placeholder images for the dossier photographs.
+      </p>
+    </div>
+
+    <div class="gallery reveal delay-2">
+      <figure class="gtile"><img src="assets/gallery/01-cooking.jpg" alt="Culinary exchange programme — INDBATT-XXVI · Suq Al Khan" loading="lazy"/><figcaption class="cap">Cooking &amp; Catering Classes</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/02-english.jpg" alt="English Language classes for Lebanese children" loading="lazy"/><figcaption class="cap">English Language Classes</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/03-computer.jpg" alt="Computer &amp; IT training for Lebanese women" loading="lazy"/><figcaption class="cap">Computer &amp; IT Training</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/04-recycling.jpg" alt="Recycling &amp; reuse awareness for children" loading="lazy"/><figcaption class="cap">Recycling Workshop</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/05-firstaid.jpg" alt="First Aid &amp; CPR training session" loading="lazy"/><figcaption class="cap">First Aid &amp; CPR</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/06-bloodscreen.jpg" alt="Free health and blood screening — INDBATT medical camp" loading="lazy"/><figcaption class="cap">Free Health &amp; Blood Screening</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/07-mentalhealth.jpg" alt="Mental health awareness session for women" loading="lazy"/><figcaption class="cap">Mental Health Awareness</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/08-dental.jpg" alt="Dental care for children with disabilities" loading="lazy"/><figcaption class="cap">Dental Care for Special Children</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/09-yoga.jpg" alt="Yoga and meditation session for women" loading="lazy"/><figcaption class="cap">Yoga &amp; Meditation</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/10-walkforpeace.jpg" alt="Major Abhilasha greeting community members" loading="lazy"/><figcaption class="cap">Walk for Peace</figcaption></figure>
+      <figure class="gtile"><img src="assets/gallery/11-trust.jpg" alt="Major Abhilasha with women of South Lebanon" loading="lazy"/><figcaption class="cap">Building Trust &amp; Harmony</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (G) VIDEO TRIBUTE
+     ======================================================== -->
+<section class="section cream-warm">
+  <div class="wrap">
+    <div class="mission-head" style="margin-bottom: 28px;">
+      <div>
+        <div class="eyebrow reveal">Film</div>
+        <h2 class="section-title reveal" style="margin-top: 18px;">
+          In her <em>own field.</em>
+        </h2>
+      </div>
+      <p class="lede reveal delay-1">
+        Two short films from the dossier — one a portrait of mission and command,
+        the other a chorus of voices from the women of South Lebanon.
+      </p>
+    </div>
+
+    <div class="videos">
+      <figure class="vid reveal">
+        <figcaption>"Major Abhilasha · INDBATT — A Life Dedicated to Gender Advocacy &amp; Empowerment."</figcaption>
+        <div class="player">
+          <video controls preload="metadata" playsinline src="Major-Abhilasha-INDBATT-web.mp4"></video>
+        </div>
+      </figure>
+
+      <figure class="vid reveal delay-1">
+        <figcaption>"Empowerment Became Reality — Voices from the Field."</figcaption>
+        <div class="player">
+          <video controls preload="metadata" playsinline src="Testimonal- Empowerment became reality.mp4"></video>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (H) STORIES OF CHANGE
+     ======================================================== -->
+<section class="section ivory">
+  <div class="wrap">
+    <div class="mission-head" style="margin-bottom: 80px;">
+      <div>
+        <div class="eyebrow reveal">Stories of change</div>
+        <h2 class="section-title reveal" style="margin-top: 18px;">
+          The villages that <em>changed their minds.</em>
+        </h2>
+      </div>
+    </div>
+
+    <div class="stories">
+      <!-- Story block 1 -->
+      <article class="story reveal">
+        <div class="story-images">
+          <figure>
+            <div class="img"><img src="assets/story-limited-patrols.jpg" alt="UNIFIL armoured patrol on a Southern Lebanon road" loading="lazy"/></div>
+            <figcaption>From limited patrols<br/>to regular patrols.</figcaption>
+          </figure>
+          <figure>
+            <div class="img"><img src="assets/story-building-trust.jpg" alt="Major Abhilasha embracing a child of the community" loading="lazy"/></div>
+            <figcaption>Building trust<br/>and harmony.</figcaption>
+          </figure>
+        </div>
+        <div class="story-body">
+          <span class="eyebrow">Alahmadiya Village · Sector East</span>
+          <h3>A community that once turned us away — now waits at the gate.</h3>
+          <p>
+            For years Alahmadiya was a no-go for UNIFIL patrols. Stones were thrown.
+            Doors stayed shut. Then a Major in a blue beret began walking in alone, again
+            and again, with nothing but conversation.
+          </p>
+          <p>
+            Today the patrols are regular. Children run alongside. Women host the
+            Engagement Team in their homes. The change was not policy — it was patience.
+          </p>
+        </div>
+      </article>
+
+      <!-- Story block 2 — testimonial -->
+      <article class="testimonial reveal">
+        <span class="quote-mark">"</span>
+        <blockquote>
+          After attending the candle-making workshop, I became confident and skilled.
+          Today, I am empowered and proud to make candles for my neighborhood.
+        </blockquote>
+        <cite><b>Ms. Jocelyne</b> &nbsp;·&nbsp; Vocational Training Participant, South Lebanon</cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (H2) FEATURE — All-women patrol
+     ======================================================== -->
+<section class="feature-bleed" aria-label="An operational first — all-women patrol">
+  <img class="bg" src="assets/all-women-patrol.jpg"
+       alt="Major Abhilasha with the all-women patrol team along the Blue Line, Southern Lebanon"
+       loading="lazy" />
+  <div class="content reveal">
+    <div class="eyebrow"><span class="bar"></span>An operational first</div>
+    <h2>She introduced an <em>all-women patrol.</em></h2>
+  </div>
+</section>
+
+<!-- ========================================================
+     (I) RECOGNITION
+     ======================================================== -->
+<section class="section cream" id="recognition">
+  <div class="wrap">
+    <div class="recog">
+      <figure class="cert reveal" aria-label="Certificate of Appreciation, El Khalil Foundation">
+        <div class="ribbon">2025</div>
+        <div class="cert-inner">
+          <div class="cert-seal">EK</div>
+          <div class="meta">El Khalil Foundation × UNIFIL</div>
+          <h4>Certificate of Appreciation</h4>
+          <div class="name">Major Abhilasha Barak</div>
+          <div class="issuer">Issued by the Executive Director · El Khalil Foundation</div>
+        </div>
+      </figure>
+
+      <div class="recog-body reveal delay-1">
+        <span class="eyebrow">Recognition</span>
+        <h2 class="section-title">
+          For service that <em>arrived without a uniform of recognition.</em>
+        </h2>
+        <p class="citation">
+          "In recognition of her outstanding dedication, unwavering commitment, and valuable
+          contributions to social work and community service…"
+        </p>
+        <div class="issuer">— Executive Director, El Khalil Foundation</div>
+        <p style="margin-top: 28px; color: var(--ink);">
+          The certificate is one of dozens she has been issued by Lebanese civic bodies, schools,
+          and community organisations across the area of operations — alongside her formal
+          nomination for the United Nations Military Gender Advocate of the Year 2025.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (J) MEDIA & PRESS
+     ======================================================== -->
+<section class="section ivory">
+  <div class="wrap">
+    <div class="mission-head" style="margin-bottom: 0;">
+      <div>
+        <div class="eyebrow reveal">Press &amp; coverage</div>
+        <h2 class="section-title reveal" style="margin-top: 18px;">
+          A story that <em>travelled.</em>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="press reveal" aria-label="Media outlets that have covered Major Abhilasha Barak">
+    <div class="row">
+      <!-- doubled for seamless marquee -->
+      <a href="https://unifil.unmissions.org/unifil%E2%80%99s-indian-peacekeepers-launch-computer-course-local-women" target="_blank" rel="noopener noreferrer">UNIFIL</a><span class="dot"></span>
+      <a href="https://soundcloud.com/unifilradio/episode-43" target="_blank" rel="noopener noreferrer">UNIFIL Radio</a><span class="dot"></span>
+      <a href="https://unifil.unmissions.org/unifil-indian-peacekeepers-lead-%E2%80%9Cwalk-peace%E2%80%9D-south-lebanon" target="_blank" rel="noopener noreferrer">UNIFIL — Walk for Peace</a><span class="dot"></span>
+      <a href="https://www.alsafanews.com/article/14136" target="_blank" rel="noopener noreferrer">Al Safa News</a><span class="dot"></span>
+      <a href="https://www.undp.org/arab-states/press-releases/central-administration-statistics-partnership-undp-launches-lebanons-first-gender-statistical-report" target="_blank" rel="noopener noreferrer">UNDP</a><span class="dot"></span>
+      <a href="https://www.lcps-lebanon.org/ar/articles/details/4914" target="_blank" rel="noopener noreferrer">LCPS Lebanon</a><span class="dot"></span>
+      <a href="https://eccowatan.com/pages/111445" target="_blank" rel="noopener noreferrer">Eccowatan</a><span class="dot"></span>
+      <a href="https://www.facebook.com/story.php?story_fbid=1412208167579242&id=100063702154113" target="_blank" rel="noopener noreferrer">Manachyr</a><span class="dot"></span>
+      <a href="https://www.youtube.com/watch?v=6HEiBMrh9NA" target="_blank" rel="noopener noreferrer">Centre for UN Peacekeeping</a><span class="dot"></span>
+      <a href="https://www.youtube.com/watch?v=Wj7PbkJwK_Q" target="_blank" rel="noopener noreferrer">Media Interview</a><span class="dot"></span>
+
+      <a href="https://unifil.unmissions.org/unifil%E2%80%99s-indian-peacekeepers-launch-computer-course-local-women" target="_blank" rel="noopener noreferrer">UNIFIL</a><span class="dot"></span>
+      <a href="https://soundcloud.com/unifilradio/episode-43" target="_blank" rel="noopener noreferrer">UNIFIL Radio</a><span class="dot"></span>
+      <a href="https://unifil.unmissions.org/unifil-indian-peacekeepers-lead-%E2%80%9Cwalk-peace%E2%80%9D-south-lebanon" target="_blank" rel="noopener noreferrer">UNIFIL — Walk for Peace</a><span class="dot"></span>
+      <a href="https://www.alsafanews.com/article/14136" target="_blank" rel="noopener noreferrer">Al Safa News</a><span class="dot"></span>
+      <a href="https://www.undp.org/arab-states/press-releases/central-administration-statistics-partnership-undp-launches-lebanons-first-gender-statistical-report" target="_blank" rel="noopener noreferrer">UNDP</a><span class="dot"></span>
+      <a href="https://www.lcps-lebanon.org/ar/articles/details/4914" target="_blank" rel="noopener noreferrer">LCPS Lebanon</a><span class="dot"></span>
+      <a href="https://eccowatan.com/pages/111445" target="_blank" rel="noopener noreferrer">Eccowatan</a><span class="dot"></span>
+      <a href="https://www.facebook.com/story.php?story_fbid=1412208167579242&id=100063702154113" target="_blank" rel="noopener noreferrer">Manachyr</a><span class="dot"></span>
+      <a href="https://www.youtube.com/watch?v=6HEiBMrh9NA" target="_blank" rel="noopener noreferrer">Centre for UN Peacekeeping</a><span class="dot"></span>
+      <a href="https://www.youtube.com/watch?v=Wj7PbkJwK_Q" target="_blank" rel="noopener noreferrer">Media Interview</a><span class="dot"></span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="press-meta reveal delay-1">
+      <b>Over 100 media features</b> across UN and local Lebanese press.
+    </p>
+  </div>
+</section>
+
+<!-- ========================================================
+     (K) THE WHY
+     ======================================================== -->
+<section class="section cream-warm">
+  <div class="wrap">
+    <div class="why">
+      <span class="eyebrow reveal">The why</span>
+      <h2 class="reveal delay-1">A choice, not a circumstance.</h2>
+
+      <div class="body">
+        <p class="reveal delay-2">
+          She lost her mother at the age of seven. The grief sharpened, rather than softened,
+          a sense that time is a thing one is given — and is therefore obliged to spend.
+        </p>
+        <p class="reveal delay-2">
+          She would go on to become India's first woman combat helicopter pilot. The cockpit
+          was a door that no woman had walked through before her, and once it opened it
+          opened for everyone after her.
+        </p>
+        <p class="reveal delay-2">
+          And then, with the door open and the rotor warm, she chose a year on the ground in
+          Lebanon — to walk into other people's villages, to sit in other people's
+          kitchens, to listen. Not because she had to. Because she believed she should.
+        </p>
+      </div>
+
+      <div class="divider reveal"></div>
+
+      <p class="closer reveal delay-1">
+        The future is shaped by <em>choices,</em> not by gender.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     (L) FOOTER
+     ======================================================== -->
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h5>Tribute</h5>
+        <div class="credit">
+          A tribute site. Built with respect.
+          <small>
+            Source — UN Military Gender Advocate of the Year 2025 nomination dossier.
+            All figures, quotes and citations drawn from the official record.
+          </small>
+        </div>
+      </div>
+      <div>
+        <h5>Reference</h5>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Abhilasha_Barak" target="_blank" rel="noopener noreferrer">Wikipedia — Major Abhilasha Barak</a></li>
+          <li><a href="https://www.youtube.com/watch?v=6HEiBMrh9NA" target="_blank" rel="noopener noreferrer">YouTube — Featured interview</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Wj7PbkJwK_Q" target="_blank" rel="noopener noreferrer">YouTube — Media interview</a></li>
+          <li><a href="https://www.lebanongenderinitiative.online/en" target="_blank" rel="noopener noreferrer">Lebanon Gender Initiative portal</a></li>
+          <li><a href="https://www.itecgoi.in/" target="_blank" rel="noopener noreferrer">ITEC Programme — Government of India</a></li>
+          <li><a href="https://unifil.unmissions.org/" target="_blank" rel="noopener noreferrer">UNIFIL — official site</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Mission</h5>
+        <ul>
+          <li>UNIFIL — UN Interim Force in Lebanon</li>
+          <li>INDBATT — Indian Battalion, Sector East</li>
+          <li>Engagement Team Commander · 2024–2025</li>
+          <li>Blue Line · Southern Lebanon</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>© <span id="year">2025</span> · A non-commercial tribute. No tracking. No analytics. No cookies.</div>
+      <div class="seal">— Dreams don't have a Gender —</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========================================================
+     Scripts
+     ======================================================== -->
+<script>
+  // Fixed top bar style change on scroll
+  const topbar = document.getElementById('topbar');
+  const onScroll = () => {
+    if (window.scrollY > 80) topbar.classList.add('scrolled');
+    else topbar.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Reveal-on-scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Counter animation when stats enter the viewport
+  const fmt = (n) => n.toLocaleString('en-IN');
+  function animateCount(el) {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    if (isNaN(target)) return;
+    const dur = 1800;
+    const start = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const unit = el.querySelector('.unit, .plus');
+    const unitHTML = unit ? unit.outerHTML : '';
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / dur);
+      const v = Math.round(target * ease(t));
+      el.innerHTML = fmt(v) + unitHTML;
+      if (t < 1) requestAnimationFrame(tick);
+      else el.innerHTML = fmt(target) + unitHTML;
+    };
+    el.innerHTML = '0' + unitHTML;
+    requestAnimationFrame(tick);
+  }
+  const countIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCount(e.target);
+        countIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.stat .num[data-count]').forEach(el => countIO.observe(el));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Source dossier — private, don't publish
+Certificate of appreciation.pdf
+Major Abhilasha*.pdf
+Major Abhilasha*.docx
+
+# Old uncompressed hero video (188 MB, exceeds Vercel's 100 MB file limit)
+Major-Abhilasha-INDBATT.mp4
+
+# Duplicate uploaded images (already copied into assets/ with semantic names)
+fet cdr.jpg.jpeg
+fet group photo.jpg.jpeg
+
+# Design tool handoff bundle — not for production
+design/
+
+# Raw extracted images — only the curated ones in assets/ and assets/gallery/ are used
+assets/raw/
+
+# Local tooling
+.claude/
+.DS_Store
+node_modules/
