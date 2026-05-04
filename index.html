@@ -118,27 +118,42 @@
   .section.navy{ background: var(--navy); color:#fff; }
   .section.cream-warm{ background: var(--cream-warm); }
 
+  /* Smaller heading inside the right column, above the paragraph */
+  .trailblazer-sub{
+    font-family: var(--serif); font-weight: 800;
+    font-size: clamp(22px, 2.2vw, 30px);
+    line-height: 1.15; letter-spacing: -.02em;
+    color: var(--navy); text-wrap: balance;
+    margin: 0 0 24px;
+    max-width: 26ch;
+  }
+  .trailblazer-sub em{
+    font-style: normal; color: var(--un-blue); font-weight: 800;
+  }
+
   .trailblazer{
     display:grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 110px);
     align-items: start;
   }
+  /* Pull-quote (now "Dreams don't have a gender") */
   .trailblazer .pull{
-    position: relative;
+    position: relative; margin: 0;
     font-family: var(--serif); font-weight: 700;
-    font-size: clamp(30px, 3.8vw, 52px); line-height: 1.1; letter-spacing:-.03em;
+    font-size: clamp(34px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -.035em;
     color: var(--navy);
-    padding-left: 28px;
+    padding: 8px 0 0 32px;
     border-left: 2px solid var(--gold);
     text-wrap: balance;
+    quotes: "\201C" "\201D";
   }
   .trailblazer .pull em{ font-style: normal; color: var(--un-blue); font-weight: 800; }
   .trailblazer .pull .attr{
-    display:block; margin-top: 28px;
+    display: block; margin-top: 28px;
     font-family: var(--sans); font-style: normal; font-size: 12px;
     letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft);
   }
   .trailblazer .body p{ margin: 0 0 1.2em; color: var(--ink); }
-  .trailblazer .body p:first-child::first-letter{
+  .trailblazer .body p:first-of-type::first-letter{
     font-family: var(--serif); font-size: 4.6em; line-height:.85; float:left;
     padding: 6px 12px 0 0; color: var(--un-blue); font-weight: 500;
   }
@@ -778,7 +793,7 @@
 
     /* Trailblazer — shrink drop cap, reduce pull-quote */
     .trailblazer .pull{ font-size: clamp(26px, 6.6vw, 38px); padding-left: 20px; }
-    .trailblazer .body p:first-child::first-letter{ font-size: 3.2em; padding: 4px 8px 0 0; }
+    .trailblazer .body p:first-of-type::first-letter{ font-size: 3.2em; padding: 4px 8px 0 0; }
     .trailblazer .body .convict{ font-size: 17px; }
 
     /* Initiatives — tighter stat blocks */
@@ -891,11 +906,14 @@
 <section class="section ivory" id="story">
   <div class="wrap">
     <div class="trailblazer">
-      <div class="pull reveal">
-        Breaking the <em>glass ceiling</em> for 698&nbsp;million women of her country.
-        <span class="attr">— On Major Abhilasha Barak</span>
-      </div>
+      <blockquote class="pull reveal">
+        &ldquo;Dreams don&rsquo;t have a <em>gender.</em>&rdquo;
+        <cite class="attr">— Major Abhilasha Barak</cite>
+      </blockquote>
       <div class="body reveal delay-1">
+        <h3 class="trailblazer-sub">
+          Breaking the <em>glass ceiling</em> for 698&nbsp;million women of her country.
+        </h3>
         <p>
           She is a soldier, an aviator, and an advocate. Major Abhilasha Barak is the first woman
           combat helicopter pilot in the history of the Indian Army — and today she serves as
